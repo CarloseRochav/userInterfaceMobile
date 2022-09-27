@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!--Titulo-->
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:text="Tareas Asignadas"
+            android:textSize="18sp" />
+
+        <!--Lista de pendientes-->
+
+        <ListView
+            android:id="@+id/tasks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <!--No se puede agregar textbox como hijos de un listview-->
+        <!--no esta permitido-->
+
+    </LinearLayout>
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+
+    <!-- include the menu created in the menu folder -->
+    <!--Importacion del menu resource creado-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#3F51D5"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
